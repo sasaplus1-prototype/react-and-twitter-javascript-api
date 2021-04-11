@@ -510,6 +510,10 @@
 	                console.log('ready');
 	                if (divElement.current) {
 	                    window.twttr.widgets.load(divElement.current);
+	                    // window.twttr.widgets.createTimeline({
+	                    //   sourceType: 'profile',
+	                    //   screenName: accountName,
+	                    // }, divElement.current);
 	                }
 	            });
 	        }

@@ -7,6 +7,7 @@ declare global {
       _e: Array<any>;
       ready: (f: () => void) => void;
       widgets: {
+        createTimeline: (data: Record<string, any>, target: HTMLElement) => void;
         load: (el: HTMLElement) => void;
       };
     };
@@ -32,6 +33,11 @@ function Twitter(props: Props) {
 
         if (divElement.current) {
           window.twttr.widgets.load(divElement.current);
+
+          // window.twttr.widgets.createTimeline({
+          //   sourceType: 'profile',
+          //   screenName: accountName,
+          // }, divElement.current);
         }
       });
     } else {
